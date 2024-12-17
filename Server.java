@@ -10,7 +10,7 @@ class Server {
     PrintWriter out;
     public Server(){
         try {
-            server=new ServerSocket(7777);
+            server=new ServerSocket(7778);
             System.out.println("Server ids ready to accept connection");
             System.out.println("waiting....");
             socket=server.accept();

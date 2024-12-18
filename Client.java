@@ -14,6 +14,7 @@ import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -68,10 +69,15 @@ public class Client extends JFrame{
         heading.setHorizontalAlignment(SwingConstants.CENTER);
         heading.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
 
+        messageArea.setEditable(false);
+        messageInput.setHorizontalAlignment(SwingConstants.CENTER);
+
         //frame layout setup
         this.setLayout(new BorderLayout());
+
         this.add(heading,BorderLayout.NORTH);
-        this.add(messageArea,BorderLayout.CENTER);
+        JScrollPane jScrollPane=new JScrollPane(messageArea);
+        this.add(jScrollPane,BorderLayout.CENTER);
         this.add(messageInput,BorderLayout.SOUTH);
         
 
